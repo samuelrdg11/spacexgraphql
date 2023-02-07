@@ -8,7 +8,9 @@ query LaunchesPast {
       mission_name
       details
       launch_date_local
-      
+      links {
+        article_link
+      }
     }
   }
 `;
@@ -20,17 +22,20 @@ function Launches() {
     if (error) return <p>Error : {error.message}</p>;
 
     return (
-            <ul>
-            {(data.launchesPast.map(({ id, mission_name, details, launch_date_local }) =>
-                <div key={id} className='container d-flex justify-content-center'>
+            <div>
+                <ul>
+            {(data.launchesPast.map(({ id, mission_name, details, launch_date_local, links }) =>
+                <div key={id} className='container d-flex'>
                     <div className='card mx-auto mb-2'>
                     <h4>{mission_name}</h4>
                     <small>{details}</small>
                     <p>{launch_date_local}</p>
+                    <p>{links.article_link}</p>
                     </div>
                 </div>
             ))}
             </ul>
+            </div>
     )
 }
 
