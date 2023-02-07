@@ -1,7 +1,8 @@
 import React from 'react'
 import { useQuery, gql } from "@apollo/client";
+import { Link } from 'react-router-dom'
 
-const Inicio = () => {
+const Capsules = () => {
     const CAPSULES = gql`
     query Capsules {
         capsules {
@@ -19,13 +20,16 @@ const Inicio = () => {
 
     return (
         <div>
-            <ul>
+            <Link to={"/"} id="backhome"> Home </Link>
+            <ul className='cards' >
                 {(data.capsules.map(({ id, type, reuse_count, status}) =>
-                    <div key={id} className='container d-flex'>
-                        <div className='card mx-auto mb-2'>
-                            <h4>{type}</h4>
-                            <p>{reuse_count}</p>
-                            <p>{status}</p>
+                    <div key={id}>
+                        <div className='card mx-auto'>
+                            <div className='title'>
+                            <h5>{type}</h5>
+                            </div>
+                            <i className="item">Reuse Cont: </i> <p>{reuse_count}</p>
+                            <i className="item">Estatus: </i> <p>{status}</p>
                         </div>
                     </div>
                 ))}
@@ -35,4 +39,4 @@ const Inicio = () => {
 }
 
 
-export default Inicio
+export default Capsules

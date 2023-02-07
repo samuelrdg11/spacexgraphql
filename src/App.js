@@ -1,9 +1,10 @@
 import './App.css';
-import Client from './Client';
-import Inicio from './Components/Inicio';
+import Launches from './Components/Launches';
+import Capsules from './Components/Capsules';
 import Navbar from './Components/Navbar';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Components/Home';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 
 function App() {
@@ -13,8 +14,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}/>
-          <Route path="/Capsules" element={<Inicio />} />
-          <Route path="/Launches" element={<Client />} />
+          <Route path="/Capsules" element={<Capsules />} />
+          <Route path="/Launches" element={<Launches />} />
         </Routes>
       </BrowserRouter>
     </div>
