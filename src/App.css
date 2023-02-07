@@ -3,7 +3,7 @@
   color: whitesmoke
 }
 body{
-  background-color: rgba(105, 105, 105, 0.782);
+  background-color: #2a2424;
 }
 
 ul{
@@ -17,11 +17,10 @@ ul{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #2e5ebd;
-  color: #313131;
+  background-color: #4781f673;
+  color: whitesmoke;
   width: 100%;
   max-width: 500px;
-
   padding: 5px 5px;
 }
 
