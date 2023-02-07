@@ -22,14 +22,12 @@ const Capsules = () => {
         <div>
             <Link to={"/"} id="backhome"> Home </Link>
             <ul className='cards' >
-                {(data.capsules.map(({ id, type, reuse_count, status}) =>
+                {(data.capsules.map(({ id, type, reuse_count, status }) =>
                     <div key={id}>
                         <div className='card mx-auto'>
-                            <div className='title'>
                             <h5>{type}</h5>
-                            </div>
-                            <i className="item">Reuse Cont: </i> <p>{reuse_count}</p>
-                            <i className="item">Estatus: </i> <p>{status}</p>
+                            <p>{reuse_count}</p>
+                            <p>{status}</p>
                         </div>
                     </div>
                 ))}

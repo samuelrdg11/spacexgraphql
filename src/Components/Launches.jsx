@@ -39,10 +39,10 @@ query LaunchesPast {
                 {(data.launchesPast.map(({ id, mission_name, details, launch_date_local, links }) =>
                     <div key={id}>
                         <div className='card mx-auto'>
-                            <i className="item">Nombre: </i> <h4>{mission_name}</h4>
-                            {/* <i className="item">Detalles: </i> <p>{details}</p> */}
-                            <i className="item">Fecha local de lanzamiento: </i> <p>{launch_date_local}</p>
-                            <i className="item">Articulo: </i> <p>{links.article_link}</p>
+                            <h5>{mission_name}</h5>
+                            {/* <p>{details}</p> */}
+                            <p>{launch_date_local}</p>
+                            <p>{links.article_link}</p>
                         </div>
                     </div>
                 ))}
