@@ -5,24 +5,38 @@
 
 body {
   background-color: #2a2424;
-  
+  font-family: 'Lato', sans-serif;
 }
 
 
 .card {
   justify-content: center;
-  color: whitesmoke;
-  width: 80%;
+  color: rgb(21, 19, 19);
   border-radius: 10px;
-  background: radial-gradient(#76b2fe, #b69efe);
+  background: radial-gradient(#76b2fe, #9ed9fe);
+  padding: 20px;
+  width: 100%;
+  min-height: 170px;
+  max-height: 20%;
 }
 
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
+  gap: 1rem;  
   max-height: 20%;
   padding: 5px 5px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  justify-content: center;
+  color: rgba(0, 153, 255, 0.668);
+}
+
+.maincontainer {
+  padding: 30px;
 }
 
 
@@ -38,4 +52,17 @@ body {
   background-color: rgba(245, 222, 179, 0.871);
   color: rgba(41, 41, 41, 0.852);
   border-radius: 3px;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.101);
+  border: 0.px solid #47474774;
+  border-radius: 5px;
+  display: block;
+}
+
+@media (max-width: 1600px) {
+  .card {
+    justify-content: center;
+  }
 }

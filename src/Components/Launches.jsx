@@ -22,23 +22,15 @@ query LaunchesPast {
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error : {error.message}</p>;
-  
-//     const articlenotfound = () => {
-//         if (data.launchesPast.links.article_link === null) 
-//         return <p>Link no encontrado</p>
-//         else {
-//         return  <p>{data.launchesPast.links.article_link}</p>
-//         }
-
-// } 
 
     return (
-        <div>
-            <Link to={"/"} id="backhome" > Home </Link>
+        <>
+        <Link to={"/"} id="backhome" > Home </Link>
+        <div className='maincontainer'> 
             <ul className='cards'>
                 {(data.launchesPast.map(({ id, mission_name, details, launch_date_local, links }) =>
                     <div key={id}>
-                        <div className='card mx-auto'>
+                        <div className='card'>
                             <h5>{mission_name}</h5>
                             {/* <p>{details}</p> */}
                             <p>{launch_date_local}</p>
@@ -48,6 +40,7 @@ query LaunchesPast {
                 ))}
             </ul>
         </div>
+        </>
     )
 
 

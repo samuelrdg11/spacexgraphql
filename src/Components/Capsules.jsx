@@ -19,12 +19,13 @@ const Capsules = () => {
     if (error) return <p>Error : {error.message}</p>;
 
     return (
-        <div>
-            <Link to={"/"} id="backhome"> Home </Link>
+        <>
+        <Link to={"/"} id="backhome"> Home </Link>
+        <div className='maincontainer'>
             <ul className='cards' >
                 {(data.capsules.map(({ id, type, reuse_count, status }) =>
                     <div key={id}>
-                        <div className='card mx-auto'>
+                        <div className='card'>
                             <h5>{type}</h5>
                             <p>{reuse_count}</p>
                             <p>{status}</p>
@@ -33,6 +34,7 @@ const Capsules = () => {
                 ))}
             </ul>
         </div>
+        </>
     )
 }
 
